@@ -45,6 +45,7 @@ func calculateFactorial(w http.ResponseWriter, r *http.Request) {
 
 	println("write to server = ", n)
 
+	//TODO : Create a bug here
 	reply := make([]byte, 1024)
 
 	_, err = conn.Read(reply)
