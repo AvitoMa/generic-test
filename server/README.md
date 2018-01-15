@@ -14,3 +14,4 @@ There is no dependencies of this server, it uses the GNU standard C libraries, b
 ### TODO
 * Optimize the way we handle the incoming message
 * Try to detect any anomaly with the memory management in the code (OUTPUT expected)
+* Create an Upstart script for this service, and register it in a service discovery once UP
