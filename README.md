@@ -30,4 +30,5 @@ As a Devops Engineer, you will need to resolve issues found in each service, mor
 * RPM packaging
 
 Many folks completed this in a short time, you can do it as well :)
+
 Good luck!
