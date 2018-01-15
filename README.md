@@ -23,6 +23,9 @@ As a Devops Engineer, you will need to resolve issues found in each service, mor
 * Put in place a Pre and Post deployment process where we can be able to run tests
 * For future development, the stack will need a Postgres service with a Master / Slave nodes
 
+#### Snapshot of the expected Infra
+![Stack Infra](https://raw.githubusercontent.com/AvitoMa/devops-test/master/lifecycle.png)
+
 #### Preferred OS / Solutions
 * Centos 7
 * Nginx
