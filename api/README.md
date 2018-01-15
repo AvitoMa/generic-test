@@ -25,3 +25,4 @@ Linux 64 : `GOOS=linux GOARCH=amd64 go build server.go`
 
 ### TODO
 * Register the API IP:port in a service discovery once UP
+* We are doing a dirty trick to clean some data in Line 69, Can you explain why we need it ?

@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
+	"log"
 	"net"
 	"net/http"
 	"os"
@@ -10,7 +13,16 @@ import (
 
 const serverAddr = "localhost:9999"
 
+type Result struct {
+	Number    string
+	Factorial string
+}
+
 func main() {
+	http.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		log.Println("Silly favicon request")
+	})
+
 	http.HandleFunc("/", calculateFactorial)
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
@@ -46,7 +58,6 @@ func calculateFactorial(w http.ResponseWriter, r *http.Request) {
 
 	println("write to server = ", n)
 
-	//TODO : Create a bug here
 	reply := make([]byte, 1024)
 
 	_, err = conn.Read(reply)
@@ -55,7 +66,16 @@ func calculateFactorial(w http.ResponseWriter, r *http.Request) {
 		os.Exit(1)
 	}
 
+	//TODO : Explain why we need this line
+	reply = bytes.Trim(reply, "\u0000")
+
+	result := &Result{
+		Number:    param,
+		Factorial: string(reply),
+	}
+
 	println("reply from server=", string(reply))
 
-	w.Write(reply)
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(result)
 }
