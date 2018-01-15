@@ -1,6 +1,10 @@
 ### Description
 This project is a Golang API accepting in the query string a number as parameter, and calculate the factorial of this number by sending a request to the Factorial TCP server.
 
+### Usage
+This API accepts HTTP GET request to the root path `/`, It accept the first appended query string param and calculate the factorial of the number
+Ex : `GET /4` would reproduce `24` 
+
 ### How to run Localy
 `go run server.go`
 
