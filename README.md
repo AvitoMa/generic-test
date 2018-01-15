@@ -4,7 +4,7 @@
 This repository contains 3 services :
 * Factorial TCP Server written in C
 * HTTP API consuming Factorial written in Golang
-* Front-end SPA app written in Javascript
+* Single page Front-end, React based
 
 Inside each folder, you will find the README.md of each service for :
 * How to build / compile
