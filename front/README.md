@@ -1,5 +1,5 @@
 ### Description
-This repository contains a front-end SPA app, its using React to manipulate the DOM, the skelton of the app was generate using : https://github.com/facebookincubator/create-react-app
+This repository contains a single page app, its React based, the skelton of the app was generate using : https://github.com/facebookincubator/create-react-app
 
 ### Usage
 The input is one number per line in the rendered textarea, after clicking Submit the React app will send an HTTP GET request to Factorial Go API and log the result in the console.
