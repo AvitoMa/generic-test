@@ -23,7 +23,7 @@ As a Devops Engineer, you will need to resolve issues found in each service, mor
 * Use whatever monitoring tool you want in order to monitor your whole stack and use a configuration management to do so 
 * For Database usage create a postgres Master / Slave cluster
 * Secure your solution by using SSL 
-* Block the access to your solution to the follwing IPs in different layers
+* Block the access to your solution to the follwing IPs in 3 different layers of network 
   - 81.192.111.243
   - 81.192.111.244
   - 81.192.111.245
@@ -33,6 +33,18 @@ As a Devops Engineer, you will need to resolve issues found in each service, mor
   - 105.159.249.86
 * Centralize your logs in one place
 * Resize both the Root disk and the postgres location of your master
+* Allow access to your Database for the following user devops-test only on slave in order to use pgAdmin
+  - 81.192.111.243
+  - 81.192.111.244
+  - 81.192.111.245
+  - 81.192.111.246
+  - 105.159.249.73
+  - 105.159.249.85
+  - 105.159.249.86
+* Use the configuration management tool in order to install pgtop, and pgbadger
+* Generate the postgres report using pgbadger
+* Use whatever tool you want to backup your Database
+* Execute a tcpdump command in different servers and explains the output
 * Document everything that you did step by step
 
 #### Snapshot of the expected Infra
