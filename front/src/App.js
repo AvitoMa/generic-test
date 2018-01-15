@@ -42,8 +42,9 @@ class App extends React.Component {
 
 function getFactorial(num) {
   return fetch(API_URL + num)
+    .then(response => response.json())
     .then((response) => {
-      console.log('Factorial of ' + num + ' is ' + response);
+      console.log('Factorial of ' + num + ' is ' + response.Factorial);
       return response;
     })
     .catch((error) => {
