@@ -5,7 +5,7 @@ This repository contains a front-end SPA app, its using React to manipulate the 
 The input is one number per line in the rendered textarea, after clicking Submit the React app will send an HTTP GET request to Factorial Go API and log the result in the console.
 
 ### How to run Localy
-`npm start` or `yarn start`
+`npm install` then `npm start` or `yarn start`
 
 ### How to build
 `npm run build` or `yarn build`
