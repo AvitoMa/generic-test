@@ -18,6 +18,7 @@ func main() {
 }
 
 func calculateFactorial(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	param := r.URL.Path
 	param = strings.TrimPrefix(param, "/")
