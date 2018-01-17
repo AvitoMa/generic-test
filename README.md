@@ -19,7 +19,8 @@ As a Devops Engineer, you will need to resolve issues found in each service, mor
 * Use whatever service discovery tool you want in order to register your services
 * Automate the provisioning of your stack while making your solution scalable 
 * Automate the deployment of your services
-* Put in place a Pre and Post deployment process where we can be able to run tests 
+* Put in place a Pre and Post deployment process where we can be able to run tests
+* Use whatever monitoring tool you want in order to monitor your whole stack and use a configuration management to do so
 * For Database usage create a postgres Master / Slave cluster
 * Secure your solution by using SSL 
 * Block the access to your solution to the follwing IPs in 3 different layers of network 
@@ -40,8 +41,8 @@ As a Devops Engineer, you will need to resolve issues found in each service, mor
   - 105.159.249.73
   - 105.159.249.85
   - 105.159.249.86
-* Use the configuration management tool in order to install pgtop, and pgbadger
-* Generate the postgres report using pgbadger
+* Use the configuration management tool in order to install pgtop on your DB server, and pgbadger on your centralized log server
+* Generate the postgres report using pgbadger after applying a stress test on your application 
 * Use whatever tool you want to backup your Database
 * Execute a tcpdump command in different servers and explains the output
 * Document everything that you did step by step
